@@ -1,12 +1,15 @@
-import React from "react";
-import "./Button.css";
+import React, {PropsWithChildren} from "react";
+import "./Button.scss";
+import classnames from 'classnames';
+
 
 export interface ButtonProps {
-    label: string;
+    children: string;
 }
 
-const Button = (props: ButtonProps) => {
-    return <button>{props.label}</button>;
+const Button: React.FC<ButtonProps> = (props: PropsWithChildren<ButtonProps>) => {
+    const {children} = props;
+    return <button>{children}</button>;
 };
 
 export default Button;

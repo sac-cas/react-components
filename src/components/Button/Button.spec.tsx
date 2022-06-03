@@ -3,8 +3,11 @@ import { render } from "@testing-library/react";
 
 import Button from "./Button";
 
-describe("Button", () => {
-    test("renders the Button component", () => {
-        render(<Button label="Hello world!" />);
+const label = 'Some Label';
+
+describe("<Button/>", () => {
+    it('should render the component', () => {
+        const { container } = render(<Button>{label}</Button>);
+        expect(container.textContent).toEqual(label);
     });
 });
