@@ -1,5 +1,5 @@
 import React, {PropsWithChildren} from "react";
-import "./Button.scss";
+import "./Button.css";
 import classnames from 'classnames';
 
 
